@@ -1,0 +1,84 @@
+<html>
+<title>staff-page</title>
+<style>
+    body{
+        margin: 0;
+        background-color: rgb(238, 231, 238);
+    }
+    .studentinfo{
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: fixed;
+        top: 0;
+        margin:10px;
+        margin-right: 10px;
+        min-width: 95%;
+        background-color: rgb(94, 6, 105);
+        color: white;
+        text-align: center;
+        padding: 5px;
+        z-index: 1;
+    }    
+    .getinfo{      
+            display: flex;
+            flex-direction: row;
+            padding:35px;
+            align-items: center;
+            border-radius: 15px;
+            text-align: left;
+            font-size: large;
+            font-family:Arial, Helvetica, sans-serif;
+            width: 35%;
+            color: rgb(212, 37, 198);
+            background-color: rgb(255, 255, 255);
+            
+            text-transform: capitalize;            
+            border: 1px solid black;
+            margin-left: 10px;
+            margin-top: 145px;
+    }
+   
+    .footer{
+        margin-bottom: 200px;
+        width: 100%;
+        background-color: rgb(51, 51, 51);
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    h1 {
+        text-align: center;
+        padding: 20px;
+    }
+    
+</style>
+<body>
+    <div class="studentinfo">
+        <h1 id="h11"> Student Info</h1>
+    </div>
+       <div class='getinfo'>
+        <form action="/submit-student-info" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <label for="course">Course:</label><br>
+        <select id="course" name="course">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Physics">Physics</option>
+            </form>   
+        </div>
+    
+       <a href="viewstudents.html">Retrieve Students Info </a>
+   
+    <div class="footer">
+        <p>Copyright &copy; 2024 Students Academic Tracking System</p>
+    </div>
+</body>
+</html>
